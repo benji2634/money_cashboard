@@ -9,4 +9,11 @@ class Transaction
     @value = options['value'].to_f
   end
 
+  def save()
+    sql = "INSERT INTO transactions (merchant_id, category_id, value) 
+    VALUES (#{@merchant_id}, #{@category_id}, #{@value}) RETURNING *"
+    transaction = SqlRunner.run(sql).first
+    @id = transaction['id'].to_i
+  end
+
 end

@@ -7,4 +7,12 @@ class Category
     @type = options['type']
     @description = options['description']
   end
+
+  def save()
+    sql = "INSERT INTO categories (type, description) 
+    VALUES ('#{@type}', '#{@description}') RETURNING *"
+    category = SqlRunner.run(sql).first
+    @id = category['id'].to_i
+  end
+
 end

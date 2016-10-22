@@ -9,4 +9,11 @@ class Merchant
     @website_url = options['website_url']
   end
 
+  def save()
+    sql = "INSERT INTO merchants (name, location, website_url) 
+    VALUES ('#{@name}', '#{@location}', '#{@website_url}') RETURNING *"
+    merchant = SqlRunner.run(sql).first
+    @id = merchant['id'].to_i
+  end
+
 end
