@@ -22,8 +22,8 @@ class Category
     return Category.map_items(sql)
   end
 
-  def self.find
-    sql = "SELECT * FROM categories WHERE id = #{@id}"
+  def self.find(id)
+    sql = "SELECT * FROM categories WHERE id = #{id}"
     return Category.map_item(sql)
   end
 

@@ -23,8 +23,8 @@ class Transaction
     return Transaction.map_items(sql)
   end
 
-  def self.find
-    sql = "SELECT * FROM transactions WHERE id = #{@id}"
+  def self.find(id)
+    sql = "SELECT * FROM transactions WHERE id = #{id}"
     return Transaction.map_item(sql)
   end
 

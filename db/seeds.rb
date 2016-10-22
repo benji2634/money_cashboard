@@ -19,14 +19,16 @@ merchant3.save
 merchant4.save
 merchant5.save
 
-category1.save = Category.new({'type' => 'food', 'description' => 'weekly'})
-category2.save = Category.new({'type' => 'food', 'description' => 'incidentals'})
-category3.save = Category.new({'type' => 'fuel', 'description' => 'tank refill'})
-category4.save = Category.new({'type' => 'fuel', 'description' => 'tank top-up'})
-category5.save = Category.new({'type' => 'travel', 'description' => 'rail season ticket'})
-category6.save = Category.new({'type' => 'travel', 'description' => 'rail individual ticket'})
-category7.save = Category.new({'type' => 'social', 'description' => 'drinks'})
-category8.save = Category.new({'type' => 'social', 'description' => 'meal'})
+
+
+category1 = Category.new({'type' => 'food', 'description' => 'weekly'})
+category2 = Category.new({'type' => 'food', 'description' => 'incidentals'})
+category3 = Category.new({'type' => 'fuel', 'description' => 'tank refill'})
+category4 = Category.new({'type' => 'fuel', 'description' => 'tank top-up'})
+category5 = Category.new({'type' => 'travel', 'description' => 'rail season ticket'})
+category6 = Category.new({'type' => 'travel', 'description' => 'rail individual ticket'})
+category7 = Category.new({'type' => 'social', 'description' => 'drinks'})
+category8 = Category.new({'type' => 'social', 'description' => 'meal'})
 
 category1.save
 category2.save
@@ -37,16 +39,16 @@ category6.save
 category7.save
 category8.save
 
-transaction1.save = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category1.id})
-transaction2.save = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category2.id})
-transaction3.save = Transaction.new({'merchant_id' => merchant3.id, 'category_id' => category2.id})
-transaction4.save = Transaction.new({'merchant_id' => merchant3.id, 'category_id' => category3.id})
-transaction5.save = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category6.id})
-transaction6.save = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category5.id})
-transaction7.save = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category7.id})
-transaction8.save = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category8.id})
-transaction9.save = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category3.id})
-transaction10.save = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category4.id})
+transaction1 = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category1.id})
+transaction2 = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category2.id})
+transaction3 = Transaction.new({'merchant_id' => merchant3.id, 'category_id' => category2.id})
+transaction4 = Transaction.new({'merchant_id' => merchant3.id, 'category_id' => category3.id})
+transaction5 = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category6.id})
+transaction6 = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category5.id})
+transaction7 = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category7.id})
+transaction8 = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category8.id})
+transaction9 = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category3.id})
+transaction10 = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category4.id})
 
 transaction1.save
 transaction2.save

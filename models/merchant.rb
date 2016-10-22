@@ -23,8 +23,8 @@ class Merchant
     return Merchant.map_items(sql)
   end
 
-  def self.find
-    sql = "SELECT * FROM merchants WHERE id = #{@id}"
+  def self.find(id)
+    sql = "SELECT * FROM merchants WHERE id = #{id}"
     return Merchant.map_item(sql)
   end
 
