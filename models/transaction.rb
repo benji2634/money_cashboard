@@ -18,4 +18,30 @@ class Transaction
     @id = transaction['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM transactions"
+    return Transaction.map_items(sql)
+  end
+
+  def self.find
+    sql = "SELECT * FROM transactions WHERE id = #{@id}"
+    return Transaction.map_item(sql)
+  end
+
+  def self.delete_all
+    sql = "DELETE FROM transactions"
+    SqlRunner.run(sql)
+  end
+
+  def self.map_items(sql)
+    transactions = SqlRunner.run(sql)
+    result = transactions.map { |transaction| Transaction.new(transaction) }
+    return result 
+  end
+
+  def self.map_item(sql)
+    result = Transaction.map_items(sql)
+    return result.first
+  end
+
 end
