@@ -6,7 +6,7 @@ require_relative('../models/merchant')
 
 class TestMerchant < Minitest::Test
 
-  def setup 
+  def setup()
     options = {
       'name' => 'Tesco',
       'location' => 'Bathgate',
@@ -27,8 +27,5 @@ class TestMerchant < Minitest::Test
   def test_merchant_website_url()
     assert_equal('www.tesco.com', @merchant.website_url())
   end
-
-
-
 
 end

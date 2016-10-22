@@ -9,14 +9,4 @@ class Merchant
     @website_url = options['website_url']
   end
 
-
-
-
-
-
-
-
-
-
-
 end

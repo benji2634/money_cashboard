@@ -19,5 +19,5 @@ CREATE TABLE transactions (
 id SERIAL4 PRIMARY KEY,
 merchant_id INT4 REFERENCES merchants(id) ON DELETE CASCADE,
 catgegory_id INT4 REFERENCES categories(id) ON DELETE CASCADE,
-value INT4
+value NUMERIC (13,2)
 );
