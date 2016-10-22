@@ -5,7 +5,7 @@ class SqlRunner
   def self.run(sql)
     begin
       db = PG.connect({dbname: 'cashboard', host: 'localhost'})
-      reuslt = db.exec(sql)
+      result = db.exec(sql)
     ensure
       db.close
     end
