@@ -39,16 +39,15 @@ category6.save
 category7.save
 category8.save
 
-transaction1 = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category1.id})
-transaction2 = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category2.id})
-transaction3 = Transaction.new({'merchant_id' => merchant3.id, 'category_id' => category2.id})
-transaction4 = Transaction.new({'merchant_id' => merchant3.id, 'category_id' => category3.id})
-transaction5 = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category6.id})
-transaction6 = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category5.id})
-transaction7 = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category7.id})
-transaction8 = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category8.id})
-transaction9 = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category3.id})
-transaction10 = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category4.id})
+transaction1 = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category1.id, 'value' => '25.33'})
+transaction2 = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category2.id, 'value' => '2.56'})
+transaction3 = Transaction.new({'merchant_id' => merchant3.id, 'category_id' => category2.id, 'value' => '9.34'})
+transaction4 = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category6.id, 'value' => '9.10'})
+transaction5 = Transaction.new({'merchant_id' => merchant4.id, 'category_id' => category5.id, 'value' => '149.00'})
+transaction6 = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category7.id, 'value' => '2.72'})
+transaction7 = Transaction.new({'merchant_id' => merchant5.id, 'category_id' => category8.id, 'value' => '5.99'})
+transaction8 = Transaction.new({'merchant_id' => merchant2.id, 'category_id' => category3.id, 'value' => '50.01'})
+transaction9 = Transaction.new({'merchant_id' => merchant1.id, 'category_id' => category4.id, 'value' => '10.00'})
 
 transaction1.save
 transaction2.save
@@ -59,7 +58,6 @@ transaction6.save
 transaction7.save
 transaction8.save
 transaction9.save
-transaction10.save
 
 binding.pry
 nil
