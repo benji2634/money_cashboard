@@ -23,6 +23,11 @@ class Transaction
     return Merchant.map_item(sql)
   end
 
+  def category()
+    sql = "SELECT * FROM categories WHERE id = #{category_id}"
+    return Category.map_item(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM transactions"
     return Transaction.map_items(sql)
