@@ -17,6 +17,11 @@ class Category
     @id = category['id'].to_i
   end
 
+  def merchants()
+    sql = "SELECT merchants.* FROM merchants INNER JOIN transactions ON transactions.merchant_id = merchants.id WHERE transactions.category_id = #{@id}"
+    return Merchant.map_items(sql)
+  end
+
   def self.all
     sql = "SELECT * FROM categories"
     return Category.map_items(sql)

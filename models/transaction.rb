@@ -18,6 +18,8 @@ class Transaction
     @id = transaction['id']
   end
 
+  
+
   def self.all
     sql = "SELECT * FROM transactions"
     return Transaction.map_items(sql)
