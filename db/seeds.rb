@@ -19,8 +19,6 @@ merchant3.save
 merchant4.save
 merchant5.save
 
-
-
 category1 = Category.new({'type' => 'food', 'description' => 'weekly'})
 category2 = Category.new({'type' => 'food', 'description' => 'incidentals'})
 category3 = Category.new({'type' => 'fuel', 'description' => 'tank refill'})
