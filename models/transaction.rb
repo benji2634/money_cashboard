@@ -18,9 +18,12 @@ class Transaction
     @id = transaction['id']
   end
 
-  
+  def merchant()
+    sql = "SELECT * FROM merchants WHERE id = #{merchant_id}"
+    return Merchant.map_item(sql)
+  end
 
-  def self.all
+  def self.all()
     sql = "SELECT * FROM transactions"
     return Transaction.map_items(sql)
   end
