@@ -2,6 +2,7 @@ require('pry-byebug')
 require_relative('../models/merchant')
 require_relative('../models/category')
 require_relative('../models/transaction')
+require_relative('../models/cashboard')
 
 Transaction.delete_all
 Category.delete_all
@@ -56,6 +57,9 @@ transaction6.save
 transaction7.save
 transaction8.save
 transaction9.save
+
+@transactions = Transaction.all
+cashboard1 = Cashboard.new(@transactions)
 
 binding.pry
 nil

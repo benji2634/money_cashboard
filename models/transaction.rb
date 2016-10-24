@@ -29,17 +29,6 @@ class Transaction
     return Category.map_item(sql)
   end
 
-  def self.total_spend()
-    transactions = Transaction.all
-    running_total = 0
-    for transaction in transactions
-      result = running_total += transaction.value
-    end
-    return result.round(2)
-    # result = transactions.collect { |transaction| running_total += transaction.value }
-    # return result
-  end
-
   def self.all()
     sql = "SELECT * FROM transactions"
     return Transaction.map_items(sql)
