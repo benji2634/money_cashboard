@@ -2,7 +2,7 @@
   <% @merchants.each do |merchant| %><br>
   Name: <a href="/merchants/<&= merchant.id %>"><%= merchant.name %></a>
   &nbsp; Location: <%= merchant.location %>
-  &nbsp; Website: <%= merchant.website_url %><br><hr>
+  &nbsp; Website: <a href="<%= merchant.website_url %>"><%= merchant.website_url %></a><br><hr>
   <% end %>
   <br>
   <a href="/merchants/new">Add new merchant</a><br>

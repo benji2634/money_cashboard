@@ -8,11 +8,11 @@ Transaction.delete_all
 Category.delete_all
 Merchant.delete_all
 
-merchant1 = Merchant.new({'name' => 'Tesco', 'location' => 'Bathgate', 'website_url' => 'www.tesco.com'})
-merchant2 = Merchant.new({'name' => 'Morrisons', 'location' => 'Bathgate', 'website_url' => 'www.morrisons.com'})
-merchant3 = Merchant.new({'name' => 'Asda', 'location' => 'Armadale', 'website_url' => 'www.asda.com'})
-merchant4 = Merchant.new({'name' => 'ScotRail', 'location' => 'Bathgate', 'website_url' => 'www.scotrail.co.uk'})
-merchant5 = Merchant.new({'name' => 'The Chanter', 'location' => 'Edinburgh', 'website_url' => 'www.thechanterpub.co.uk'})
+merchant1 = Merchant.new({'name' => 'Tesco', 'location' => 'Bathgate', 'website_url' => 'http://www.tesco.com'})
+merchant2 = Merchant.new({'name' => 'Morrisons', 'location' => 'Bathgate', 'website_url' => 'http://www.morrisons.com'})
+merchant3 = Merchant.new({'name' => 'Asda', 'location' => 'Armadale', 'website_url' => 'http://www.asda.com'})
+merchant4 = Merchant.new({'name' => 'ScotRail', 'location' => 'Bathgate', 'website_url' => 'http://www.scotrail.co.uk'})
+merchant5 = Merchant.new({'name' => 'The Chanter', 'location' => 'Edinburgh', 'website_url' => 'http://www.thechanterpub.co.uk'})
 
 merchant1.save
 merchant2.save

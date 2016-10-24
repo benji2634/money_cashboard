@@ -1,0 +1,9 @@
+<div>
+  <% @categories.each do |category| %><br>
+  Type: <a href="/merchants/<&= merchant.id %>"><%= category.type %></a>
+  &nbsp; Description: <%= category.description %><br><hr>
+  <% end %>
+  <br>
+  <a href="/categories/new">Add new category</a><br>
+  <br>
+</div>
