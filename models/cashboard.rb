@@ -1,5 +1,6 @@
 require_relative('../db/sql_runner')
 require_relative('transaction')
+require_relative('category')
 
 class Cashboard
 
@@ -16,6 +17,9 @@ class Cashboard
     return result.round(2)
   end
 
+  # def total_by_category()
+    
+  # end
   # SELECT categories.type FROM categories INNER JOIN transactions ON transactions.category_id = categories.id;
   # def self.total_spend_by_category
   #   transactions = Transaction.all
