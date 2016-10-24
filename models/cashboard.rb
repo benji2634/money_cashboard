@@ -17,13 +17,9 @@ class Cashboard
     return result.round(2)
   end
 
-  # def total_spend_by_category
-  #   transactions = Transaction.all
-  #   running_total = 0
-  #   for transaction in transactions
-  #     result = running_total += transaction.value
-  #   end
-  #   return result.round(2)
+  # def total_by_category()
+  #   cashboard1 = Cashboard.new(@transactions)
+  #   return cashboard1.totaller
   # end
 
 end

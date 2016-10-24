@@ -58,23 +58,5 @@ transaction7.save
 transaction8.save
 transaction9.save
 
-@all_transactions = Transaction.all
-cashboard = Cashboard.new(@all_transactions)
-puts cashboard.totaller
-
-@transactions1 = category1.transactions
-cashboard1 = Cashboard.new(@transactions1)
-puts cashboard1.totaller
-
-@transactions2 = category2.transactions
-cashboard2 = Cashboard.new(@transactions2)
-puts cashboard2.totaller
-
-@transactions3 = category3.transactions
-cashboard3 = Cashboard.new(@transactions3)
-puts cashboard3.totaller
-
-binding.pry
-nil
 
 
