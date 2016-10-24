@@ -13,6 +13,7 @@ end
 get '/transactions/new' do
   @categories = Category.all()
   @merchants = Merchant.all()
+  @transactions = Transaction.all()
   erb(:'transactions/new')
 end
 

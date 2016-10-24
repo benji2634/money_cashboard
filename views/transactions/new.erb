@@ -7,8 +7,9 @@
   <% @categories.each do |category| %>
     <option value="<%= category.id %>"><%= category.type %></option>
   <% end %>
+</select>
 
-</select><label for="category_id">&nbsp; Description: </label>
+<label for="category_id">&nbsp; Description: </label>
 <select name="category_id" id="category_id">
   <% @categories.each do |category| %>
     <option value="<%= category.id %>"><%= category.description %></option>
@@ -21,6 +22,14 @@
     <option value="<%= merchant.id %>"><%= merchant.name %></option>
   <% end %>
 </select>
+
+<label for="transaction_id">&nbsp; Value: </label>
+<select name="transaction_id" id="transaction_id">
+  <% @transactions.each do |transaction| %>
+    <option value="<%= transaction.id %>"><%= transaction.value %></option>
+  <% end %>
+</select>
+
 <br>
 <br>
 

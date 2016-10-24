@@ -1,9 +1,10 @@
 <div>
   <% @transactions.each do |transaction| %><br>
   Merchant: <%= transaction.merchant.name %>
-  &nbsp; Category: <%= transaction.category.type %><br><hr>
+  &nbsp; Category: <%= transaction.category.type %>
+  &nbsp; Value: <%= transaction.value %><br><hr>
   <% end %>
   <br>
-  <a href="/transactions/new">Add a new transaction</a><br>
+  <a href="/transactions/new">Add new transaction</a><br>
   <br>
 </div>
