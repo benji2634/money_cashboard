@@ -17,6 +17,11 @@ get '/transactions/new' do
 end
 
 # create
+post '/transactions' do
+  @transactions = Transaction.new(params)
+  @transactions.save
+  erb(:'transactions/create')
+end
 
 # show
 

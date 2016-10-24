@@ -13,6 +13,11 @@ get '/merchants/new' do
 end
 
 # create
+post '/merchants' do
+  @merchants = Merchant.new(params)
+  @merchants.save
+  erb(:'merchants/create')
+end
 
 # show
 

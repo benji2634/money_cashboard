@@ -13,6 +13,11 @@ get '/categories/new' do
 end
 
 # create
+post '/categories' do
+  @categories = Category.new(params)
+  @categories.save
+  erb(:'categories/create')
+end
 
 # show
 
