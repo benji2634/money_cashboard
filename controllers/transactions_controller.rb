@@ -8,7 +8,13 @@ get '/transactions' do
   @transactions = Transaction.all()
   erb(:'transactions/index')
 end
+
 # new
+get '/transactions/new' do
+  @categories = Category.all()
+  @merchants = Merchant.all()
+  erb(:'transactions/new')
+end
 
 # create
 
