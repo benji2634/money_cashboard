@@ -9,7 +9,7 @@ class Cashboard
   end
 
 # use sprintf
-  def total_spend()
+  def totaller()
     running_total = 0
     for transaction in @transactions
       result = running_total += transaction.value
@@ -17,11 +17,7 @@ class Cashboard
     return result.round(2)
   end
 
-  # def total_by_category()
-    
-  # end
-  # SELECT categories.type FROM categories INNER JOIN transactions ON transactions.category_id = categories.id;
-  # def self.total_spend_by_category
+  # def total_spend_by_category
   #   transactions = Transaction.all
   #   running_total = 0
   #   for transaction in transactions
