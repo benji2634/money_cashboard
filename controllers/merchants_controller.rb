@@ -7,6 +7,9 @@ get '/merchants' do
   erb(:'merchants/index')
 end
 # new
+get '/merchants/new' do
+  erb(:'merchants/new')
+end
 
 # create
 
