@@ -34,6 +34,10 @@ get '/transactions/:id' do
 end
 
 # edit
+get '/transactions/:id/edit' do
+  @transaction = Transaction.find(params[:id])
+  erb( :'transactions/edit' )
+end
 
 # update
 
