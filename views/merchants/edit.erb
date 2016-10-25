@@ -1,0 +1,13 @@
+<div class="content">
+
+  <h2>Edit merchant</h2>
+
+  <form action="/merchants/<%= @merchant.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= @merchant.name %>"><br>
+    <br>
+    <input type='submit' value="Update merchant">
+  </form>
+
+</div>

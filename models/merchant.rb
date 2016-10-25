@@ -33,6 +33,15 @@ class Merchant
     return Merchant.map_item(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE merchants SET
+          name = '#{options['name']}',
+          location = '#{options['location']}',
+          website_url = '#{options['website_url']}',
+          WHERE id = #{options['id']}"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM merchants"
     SqlRunner.run(sql)
