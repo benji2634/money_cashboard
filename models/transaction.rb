@@ -11,7 +11,6 @@ class Transaction
     @merchant_id = options['merchant_id'].to_i
     @category_id = options['category_id'].to_i
     @value = options['value'].to_f
-    # @invalid_value = options['invalid_value'].to_f
   end
 
   def save()
@@ -20,11 +19,6 @@ class Transaction
     transaction = SqlRunner.run(sql).first
     @id = transaction['id']
   end
-
-  # def round_to_2_decimal_places
-  #   result = invalid_value.round(2)
-  #   return result
-  # end
 
   def merchant()
     sql = "SELECT * FROM merchants WHERE id = #{merchant_id}"
