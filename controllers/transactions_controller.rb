@@ -2,6 +2,7 @@ require('pry-byebug')
 require_relative('../models/transaction')
 require_relative('../models/category')
 require_relative('../models/merchant')
+require_relative('../models/cashboard')
 
 #index
 get '/transactions' do

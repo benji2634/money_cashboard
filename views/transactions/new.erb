@@ -24,12 +24,7 @@
 </select>
 
 <label for="transaction_id">&nbsp; Value: </label>
-<select name="transaction_id" id="transaction_id">
-  <% @transactions.each do |transaction| %>
-    <option value="<%= transaction.id %>"><%= transaction.value %></option>
-  <% end %>
-</select>
-
+<input type="number" step="0.01" min="0" value="0.00" name="transaction_id"><br>
 <br>
 <br>
 
