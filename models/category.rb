@@ -2,17 +2,16 @@ require_relative('../db/sql_runner')
 
 class Category
 
-  attr_reader :id, :type, :description
+  attr_reader :id, :type
 
   def initialize(options)
     @id = nil || options['id'].to_i
     @type = options['type']
-    @description = options['description']
   end
 
   def save()
-    sql = "INSERT INTO categories (type, description) 
-    VALUES ('#{@type}', '#{@description}') RETURNING *"
+    sql = "INSERT INTO categories (type) 
+    VALUES ('#{@type}') RETURNING *"
     category = SqlRunner.run(sql).first
     @id = category['id'].to_i
   end

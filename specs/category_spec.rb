@@ -8,18 +8,13 @@ class TestCategory < MiniTest::Test
 
   def setup()
     options = {
-      'type' => 'food',
-      'description' => 'weekly shop'
+      'type' => 'food'
     }
     @category = Category.new(options)
   end
 
   def test_category_type
     assert_equal('food', @category.type())
-  end
-
-  def test_catgory_description
-    assert_equal('weekly shop', @category.description())
   end
 
 end
