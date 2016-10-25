@@ -1,5 +1,6 @@
 <div>
   <% @transactions.each do |transaction| %><br>
+  Transaction: <a href="/transactions/<%= transaction.id %>"><%= transaction.id %></a>
   Merchant: <%= transaction.merchant.name %>
   &nbsp; Category: <%= transaction.category.type %>
   &nbsp; Value: <%= transaction.value %><br><hr>
