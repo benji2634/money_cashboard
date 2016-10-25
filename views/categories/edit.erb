@@ -4,8 +4,8 @@
 
   <form action="/categories/<%= @category.id %>" method="post">
     <input type="hidden" name="_method" value="put">
-    <label for="name">Type:</label>
-    <input type="text" name="name" value="<%= @category.type %>"><br>
+    <label for="type">Type:</label>
+    <input type="text" name="type" value="<%= @category.type %>"><br>
     <br>
     <input type='submit' value="Update category">
   </form>

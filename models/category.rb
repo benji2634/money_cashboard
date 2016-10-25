@@ -36,6 +36,13 @@ class Category
     return Category.map_item(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE categories SET
+          type = '#{options['type']}'
+          WHERE id = #{options['id']}"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM categories"
     SqlRunner.run(sql)

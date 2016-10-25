@@ -40,5 +40,9 @@ get '/transactions/:id/edit' do
 end
 
 # update
+put '/transactions/:id' do
+ @transaction = Transaction.update(params)
+ redirect to( "/transactions/#{params[:id]}" )
+end
 
 # delete
