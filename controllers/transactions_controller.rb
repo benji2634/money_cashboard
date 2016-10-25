@@ -35,6 +35,8 @@ end
 
 # edit
 get '/transactions/:id/edit' do
+  @categories = Category.all()
+  @merchants = Merchant.all()
   @transaction = Transaction.find(params[:id])
   erb( :'transactions/edit' )
 end

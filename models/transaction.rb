@@ -40,6 +40,15 @@ class Transaction
     return Transaction.map_item(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE transactions SET
+          merchant_id = '#{options['merchant_id']}',
+          category_id = '#{options['category_id']}',
+          value = '#{options['value']}'
+          WHERE id = #{options['id']}"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM transactions"
     SqlRunner.run(sql)
