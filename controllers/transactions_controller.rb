@@ -7,6 +7,8 @@ require_relative('../models/cashboard')
 #index
 get '/transactions' do
   @transactions = Transaction.all()
+  @cashboard_all = Cashboard.new(@transactions)
+
   erb(:'transactions/index')
 end
 
