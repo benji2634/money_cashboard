@@ -8,4 +8,9 @@
   <br>
   <a href="/transactions/new">Add new transaction</a><br>
   <br>
+
+  <% @all_transactions = Transaction.all %>
+  <% cashboard_all = Cashboard.new(@all_transactions) %><br>
+  Total: <%= cashboard_all.totaller %><br><hr>
+
 </div>

@@ -21,7 +21,11 @@ end
 
 # show
 get '/categories/:id' do
-  @categories = Category.find(params[:id])
+  @category = Category.find(params[:id])
+
+  transactions = @category.transactions
+  @cashboard = Cashboard.new(transactions)
+
   erb(:'categories/show')
 end
 

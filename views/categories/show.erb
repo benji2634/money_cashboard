@@ -1,8 +1,11 @@
-<h2><%= @categories.type %></h2>
+<h2><%= @category.type %></h2>
 
 <h3>List of merchants: </h3>
 
-<% @categories.merchants.each do |merchant| %>
-  <a href="/merchants/<%= merchant.id %>"><%= merchant.name %><br>
+<% @category.merchants.each do |merchant| %>
+  <a href="/merchants/<%= merchant.id %>"><%= merchant.name %></a>
+  <br>
   <br>
 <% end %>
+
+Total: <%= @cashboard.totaller %><br><hr>
