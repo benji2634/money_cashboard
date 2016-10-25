@@ -9,7 +9,7 @@ class TestTransaction < Minitest::Test
   def setup
     options = {
       'value' => '25.23',
-      'invalid_value' => '25.2342'
+      # 'invalid_value' => '25.2342'
     }
     @transaction = Transaction.new(options)
   end
