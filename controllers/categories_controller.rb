@@ -36,5 +36,9 @@ get '/categories/:id/edit' do
 end
 
 # update
+put '/categories/:id' do
+ @category = Category.update(params)
+ redirect to( "/categories/#{params[:id]}" )
+end
 
 # delete

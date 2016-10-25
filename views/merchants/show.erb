@@ -1,8 +1,10 @@
-<h2><%= @merchants.name %></h2>
+<h2>Name: <%= @merchants.name %></h2>
 
 <h3>Location: <%= @merchants.location %></h3>
 
-<h3>List of categories: </h3>
+<h3>Website: <%= @merchants.website_url %></h3>
+
+<h5>List of categories: </h5>
 
 <% @merchants.categories.each do |category| %>
   <a href="/categories/<%= category.id %>"><%= category.type %></a><br>

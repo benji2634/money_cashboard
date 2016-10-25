@@ -32,5 +32,9 @@ get '/merchants/:id/edit' do
 end
 
 # update
+put '/merchants/:id' do
+ @merchant = Merchant.update(params)
+ redirect to( "/merchants/#{params[:id]}" )
+end
 
 # delete

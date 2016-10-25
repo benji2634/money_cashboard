@@ -4,8 +4,15 @@
 
   <form action="/transactions/<%= @transaction.id %>" method="post">
     <input type="hidden" name="_method" value="put">
-    <label for="name">Name:</label>
+    <label for="name">Transaction:</label>
     <input type="text" name="name" value="<%= @transaction.id %>"><br>
+    <br>
+    <label for="name">Merchant:</label>
+    <input type="text" name="name" value="<%= @transaction.merchant.name %>"><br>
+    <br>
+    <label for="name">Category:</label>
+    <input type="text" name="name" value="<%= @transaction.category.type %>">
+    <br>
     <br>
     <input type='submit' value="Update transaction">
   </form>

@@ -37,7 +37,7 @@ class Merchant
     sql = "UPDATE merchants SET
           name = '#{options['name']}',
           location = '#{options['location']}',
-          website_url = '#{options['website_url']}',
+          website_url = '#{options['website_url']}'
           WHERE id = #{options['id']}"
     SqlRunner.run(sql)
   end
