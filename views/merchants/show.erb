@@ -1,0 +1,10 @@
+<h2><%= @merchants.name %></h2>
+
+<h3>Location: <%= @merchants.location %></h3>
+
+<h3>List of categories: </h3>
+
+<% @merchants.categories.each do |category| %>
+  <a href="/categories/<%= category.id %>"><%= category.type %><br>
+  <br>
+<% end %>

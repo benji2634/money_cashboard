@@ -20,6 +20,10 @@ post '/merchants' do
 end
 
 # show
+get '/merchants/:id' do
+  @merchants = Merchant.find(params[:id])
+  erb(:'merchants/show')
+end
 
 # edit
 

@@ -1,6 +1,6 @@
 <div>
   <% @merchants.each do |merchant| %><br>
-  Name: <a href="/merchants/<&= merchant.id %>"><%= merchant.name %></a>
+  Name: <a href="/merchants/<%= merchant.id %>"><%= merchant.name %></a>
   &nbsp; Location: <%= merchant.location %>
   &nbsp; Website: <a href="<%= merchant.website_url %>"><%= merchant.website_url %></a><br><hr>
   <% end %>

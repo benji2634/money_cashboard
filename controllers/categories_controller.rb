@@ -20,6 +20,10 @@ post '/categories' do
 end
 
 # show
+get '/categories/:id' do
+  @categories = Category.find(params[:id])
+  erb(:'categories/show')
+end
 
 # edit
 
