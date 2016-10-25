@@ -26,6 +26,10 @@ post '/transactions' do
 end
 
 # show
+get '/transactions/:id' do
+  @transactions = Transaction.find(params[:id])
+  erb(:'transactions/show')
+end
 
 # edit
 
