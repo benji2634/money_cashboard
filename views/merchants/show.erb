@@ -12,3 +12,11 @@
 <% end %>
 
 <a href="/merchants/<%= @merchants.id %>/edit">Edit</a>
+<br>
+<br>
+
+<form action="/merchants/<%= @merchants.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  
+  <input type='submit' value="Delete merchant">
+</form>

@@ -42,3 +42,7 @@ put '/categories/:id' do
 end
 
 # delete
+delete '/categories/:id' do
+  Category.destroy( params[:id] )
+  redirect to('/categories')
+end

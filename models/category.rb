@@ -43,6 +43,11 @@ class Category
     SqlRunner.run(sql)
   end
 
+  def self.destroy(id)
+    sql = "DELETE FROM categories WHERE id= #{id}"
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM categories"
     SqlRunner.run(sql)
