@@ -3,7 +3,8 @@ require_relative('../models/merchant')
 
 #index
 get '/merchants' do
-  @merchants = Merchant.all()
+  query = params[:search]
+  @merchants = Merchant.all(query)
   erb(:'merchants/index')
 end
 

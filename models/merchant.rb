@@ -23,9 +23,12 @@ class Merchant
     return Category.map_items(sql)
   end
 
-  def self.all()
+  def self.all(query = "")
+    query = query.to_s.downcase
     sql = "SELECT * FROM merchants"
-    return Merchant.map_items(sql)
+    sql = sql + " WHERE LOWER(name) LIKE '%#{query}%'" unless query.empty?
+    result = Merchant.map_items(sql)
+    return result
   end
 
   def self.find(id)

@@ -8,7 +8,6 @@ class Cashboard
     @transactions = transactions
   end
 
-# use sprintf
   def totaller()
     running_total = 0
     for transaction in @transactions

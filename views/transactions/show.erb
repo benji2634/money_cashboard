@@ -8,3 +8,11 @@
 
 <a href="/transactions/<%= @transactions.id %>/edit">Edit</a>
 
+<br>
+<br>
+
+<form action="/transactions/<%= @transactions.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  
+  <input type='submit' value="Delete transaction">
+</form>
