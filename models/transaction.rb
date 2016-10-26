@@ -30,9 +30,13 @@ class Transaction
     return Category.map_item(sql)
   end
 
-  def self.all()
-    sql = "SELECT * FROM transactions"
-    return Transaction.map_items(sql)
+  def self.all(query = "", addon = "")
+    query = query.to_s.downcase
+    sql = "SELECT transactions.* FROM transactions"
+    sql = sql + " INNER JOIN categories ON transactions.category_id = categories.id WHERE LOWER(categories.type) LIKE '%#{query}%'" if !query.empty? && addon == "categories"
+    sql = sql + " INNER JOIN merchants ON transactions.merchant_id = merchants.id WHERE LOWER(merchants.name) LIKE '%#{query}%'" if !query.empty? && addon == "merchants"
+    result = Transaction.map_items(sql)
+    return result
   end
 
   def self.find(id)
