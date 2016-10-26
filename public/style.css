@@ -1,7 +1,7 @@
 body {
   font-family: "Trebuchet MS";
   margin: 0;
-  background-color: navy;
+  background-color: white;
 }
 
 footer {
@@ -12,12 +12,12 @@ footer {
 
 div {
   font-family: verdana;
-  opacity: 0.9;
 }
 
 .home {
   background-color: white;
   color: navy;
+  opacity: 0.9;
 }
 
 .logo {
@@ -34,7 +34,25 @@ div {
 
 .right_side {
   float: right;
+  color: white;
 }
+
+.links {
+  background-color: white;
+  opacity: 0.9;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+    border-spacing: 5px;
+}
+
+/*tr:hover {
+    background-color: #f5f5f5
+}*/
+
 
 nav {
   background-color: lightgrey;
@@ -71,7 +89,7 @@ nav ul li{
 
 nav ul li a{
   text-decoration: none;
-  color: blue;
+  color: white;
   line-height: 65px;
   margin-left: 20px;
   font-size: 20px;
@@ -101,10 +119,11 @@ input[type=submit] {
 
 main {
   padding-top: 80px;
-  background-image: url("https://4.bp.blogspot.com/-90QWNdjO42M/VXggDD89_OI/AAAAAAAABFo/Wc2Xfmgtm-o/s1600/Walter%2527s%2Bnot-white%2Bmoney.jpg");
   overflow: scroll;
   min-height: 50em;
   font-family: verdana;
+  background-image: url("https://4.bp.blogspot.com/-90QWNdjO42M/VXggDD89_OI/AAAAAAAABFo/Wc2Xfmgtm-o/s1600/Walter%2527s%2Bnot-white%2Bmoney.jpg");
+
 }
 
 main ul li {

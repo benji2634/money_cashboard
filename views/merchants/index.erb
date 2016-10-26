@@ -1,11 +1,21 @@
-<div>
-  <% @merchants.each do |merchant| %><br>
-  Name: <a href="/merchants/<%= merchant.id %>"><%= merchant.name %></a>
-  &nbsp; Location: <%= merchant.location %>
-  &nbsp; Website: <a href="<%= merchant.website_url %>"><%= merchant.website_url %></a><br><hr>
-  <% end %>
+<div class="links">
+  <table>
+    <tr>
+      <th>Name: </th>
+      <th>Location: </th>
+      <th>Website: </th>
+    </tr>
+    <tr>
+      <% @merchants.each do |merchant| %>
+      <td><a href="/merchants/<%= merchant.id %>"><%= merchant.name %></a></td>
+      <td><%= merchant.location %></td>
+      <td><a href="<%= merchant.website_url %>"><%= merchant.website_url %></a></td>
+    </tr>
+    <% end %>
+  </table>
+
   <br>
-  <a href="/merchants/new">Add new merchant</a><br>
+  &nbsp &nbsp<a href="/merchants/new">Add new merchant</a>
   <br>
 
   <form method="get">

@@ -1,10 +1,18 @@
-<div>
-  <% @categories.each do |category| %><br>
-  Type: <a href="/categories/<%= category.id %>"><%= category.type %></a><br><hr>
-  <% end %>
-  <br>
-  <a href="/categories/new">Add new category</a><br>
-  <br>
+<div class="links">
+  <table>
+    <tr>
+      <th>Type: </th>
+    </tr>
+    <tr>
+      <% @categories.each do |category| %>
+      <td><a href="/categories/<%= category.id %>"><%= category.type %></a></td>
+    </tr>  
+    <% end %>
+  </table>
+    
+  <br> 
+  &nbsp &nbsp<a href="/categories/new">Add new category</a>
+  <br>  
 
   <form method="get">
     Search by category type:

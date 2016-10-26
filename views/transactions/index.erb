@@ -1,4 +1,4 @@
-<div>
+<div class="links">
   <% @transactions.each do |transaction| %><br>
   Transaction: <a href="/transactions/<%= transaction.id %>"><%= transaction.id %></a>
   Merchant: <%= transaction.merchant.name %>
@@ -9,7 +9,7 @@
   <a href="/transactions/new">Add new transaction</a><br>
   <br>
 
-  Total: <%= sprintf("£%.2f", @cashboard_all.totaller) %><br>
+  Total: <%= (sprintf"£%.2f", @cashboard_all.totaller) %><br>
 
   <form method="get">
     Search transactions:

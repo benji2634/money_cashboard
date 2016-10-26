@@ -13,7 +13,8 @@ class Cashboard
     for transaction in @transactions
       result = running_total += transaction.value
     end
-    return result
+    return result if result == !nil
+    return running_total
   end
 
 end
