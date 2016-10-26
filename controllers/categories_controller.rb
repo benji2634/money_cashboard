@@ -3,7 +3,8 @@ require_relative('../models/category')
 
 #index
 get '/categories' do
-  @categories = Category.all()
+  query = params[:search]
+  @categories = Category.all(query)
   erb(:'categories/index')
 end
 

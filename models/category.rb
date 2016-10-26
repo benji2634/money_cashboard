@@ -26,9 +26,12 @@ class Category
   return Transaction.map_items(sql)
   end
 
-  def self.all
+  def self.all(query = "")
+    query = query.to_s.downcase
     sql = "SELECT * FROM categories"
-    return Category.map_items(sql)
+    sql = sql + " WHERE LOWER(type) LIKE '%#{query}%'" unless query.empty?
+    result = Category.map_items(sql)
+    return result
   end
 
   def self.find(id)
