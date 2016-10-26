@@ -1,14 +1,9 @@
 <div class="links">
-  <table align="center">
-    <tr>
-      <th>Type: </th>
-    </tr>
-    <tr>
+  <ul>
+    <h4>Type: </h4>
       <% @categories.each do |category| %>
-      <td><a href="/categories/<%= category.id %>"><%= category.type %></a></td>
-    </tr>  
+      <li><a href="/categories/<%= category.id %>"><%= category.type %></a></li>  
     <% end %>
-  </table>
 
   <br> 
   &nbsp &nbsp<a href="/categories/new">Add new category</a>
