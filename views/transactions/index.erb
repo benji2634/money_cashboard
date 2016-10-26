@@ -9,7 +9,7 @@
   <a href="/transactions/new">Add new transaction</a><br>
   <br>
 
-  Total: <%= sprintf("%.2f", @cashboard_all.totaller) %><br><hr>
+  Total: <%= sprintf("£%.2f", @cashboard_all.totaller) %><br>
 
   <form method="get">
     Search transactions:
@@ -20,5 +20,5 @@
     </select>
     <input type="submit" value="search" />
   </form>
-
+  <br>
 </div>
