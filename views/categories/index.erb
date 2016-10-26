@@ -1,9 +1,10 @@
 <div class="links">
   <ul>
     <h4>Type: </h4>
-      <% @categories.each do |category| %>
-      <li><a href="/categories/<%= category.id %>"><%= category.type %></a></li>  
+    <% @categories.each do |category| %>
+    <li><a href="/categories/<%= category.id %>"><%= category.type %></a></li>  
     <% end %>
+  </ul>
 
   <br> 
   &nbsp &nbsp<a href="/categories/new">Add new category</a>
