@@ -1,18 +1,22 @@
-<h2>Transaction: <%= @transactions.id %></h2>
+<div class="show_pages">
 
-<h3>Merchant: <%= @transactions.merchant.name %></h3>
+  <h2>Transaction: <%= @transactions.id %></h2>
 
-<h3>Category: <%= @transactions.category.type %></h3>
+  <h3>Merchant: <%= @transactions.merchant.name %></h3>
 
-<h3>Value: <%= @transactions.value %></h3>
+  <h3>Category: <%= @transactions.category.type %></h3>
 
-<a href="/transactions/<%= @transactions.id %>/edit">Edit</a>
+  <h3>Value: <%= @transactions.value %></h3>
 
-<br>
-<br>
+  <a href="/transactions/<%= @transactions.id %>/edit">Edit</a>
 
-<form action="/transactions/<%= @transactions.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  
-  <input type='submit' value="Delete transaction">
-</form>
+  <br>
+  <br>
+
+  <form action="/transactions/<%= @transactions.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    
+    <input type='submit' value="Delete transaction">
+  </form>
+
+</div>

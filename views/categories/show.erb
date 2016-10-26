@@ -1,22 +1,26 @@
-<h2>Type: <%= @category.type %></h2>
+<div class="show_pages">
 
-<h3>List of merchants: </h3>
+  <h2>Type: <%= @category.type %></h2>
 
-<% @category.merchants.each do |merchant| %>
+  <h3>List of merchants: </h3>
+
+  <% @category.merchants.each do |merchant| %>
   <a href="/merchants/<%= merchant.id %>"><%= merchant.name %></a>
   <br>
   <br>
-<% end %>
+  <% end %>
 
-Total: <%= sprintf("£%.2f", @cashboard.totaller) %><br><hr>
-<br>
-<a href="/categories/<%= @category.id %>/edit">Edit</a>
+  Total: <%= sprintf("£%.2f", @cashboard.totaller) %><br><hr>
+  <br>
+  <a href="/categories/<%= @category.id %>/edit">Edit</a>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<form action="/categories/<%= @category.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  
-  <input type='submit' value="Delete category">
-</form>
+  <form action="/categories/<%= @category.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    
+    <input type='submit' value="Delete category">
+  </form>
+
+</div>
