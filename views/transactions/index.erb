@@ -1,15 +1,28 @@
 <div class="links">
-  <% @transactions.each do |transaction| %><br>
-  Transaction: <a href="/transactions/<%= transaction.id %>"><%= transaction.id %></a>
-  Merchant: <%= transaction.merchant.name %>
-  &nbsp; Category: <%= transaction.category.type %>
-  &nbsp; Value: <%= sprintf("£%.2f", transaction.value) %><br><hr>
-  <% end %>
+  <table>
+    <tr>
+      <th>Transaction: </th>
+      <th>Merchant: </th>
+      <th>Category: </th>
+      <th>Value: </th>
+    </tr>
+    <tr>
+      <% @transactions.each do |transaction| %><br>
+      <td><a href="/transactions/<%= transaction.id %>"><%= transaction.id %></a></td>
+      <td><%= transaction.merchant.name %></td>
+      <td><%= transaction.category.type %></td>
+      <td><%= sprintf("£%.2f", transaction.value) %></td>
+    </tr>
+    <% end %>
+  </table>
+
   <br>
-  <a href="/transactions/new">Add new transaction</a><br>
+  <a href="/transactions/new">Add new transaction</a>
+  <br>
   <br>
 
-  Total: <%= (sprintf"£%.2f", @cashboard_all.totaller) %><br>
+  Total: <%= (sprintf"£%.2f", @cashboard_all.totaller) %>
+  <br>
 
   <form method="get">
     Search transactions:
