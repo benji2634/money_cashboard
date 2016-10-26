@@ -1,22 +1,26 @@
-<h2>Name: <%= @merchants.name %></h2>
+<div class="show_pages">
 
-<h3>Location: <%= @merchants.location %></h3>
+  <h2>Name: <%= @merchants.name %></h2>
 
-<h3>Website: <%= @merchants.website_url %></h3>
+  <h3>Location: <%= @merchants.location %></h3>
 
-<h5>List of categories: </h5>
+  <h3>Website: <%= @merchants.website_url %></h3>
 
-<% @merchants.categories.each do |category| %>
-  <a href="/categories/<%= category.id %>"><%= category.type %></a><br>
+  <h5>List of categories: </h5>
+
+  <% @merchants.categories.each do |category| %>
+    <a href="/categories/<%= category.id %>"><%= category.type %></a><br>
+    <br>
+  <% end %>
+
+  <a href="/merchants/<%= @merchants.id %>/edit">Edit</a>
   <br>
-<% end %>
+  <br>
 
-<a href="/merchants/<%= @merchants.id %>/edit">Edit</a>
-<br>
-<br>
+  <form action="/merchants/<%= @merchants.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    
+    <input type='submit' value="Delete merchant">
+  </form>
 
-<form action="/merchants/<%= @merchants.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  
-  <input type='submit' value="Delete merchant">
-</form>
+</div>

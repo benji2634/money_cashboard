@@ -1,5 +1,5 @@
 <div class="links">
-  <table>
+  <table align="center">
     <tr>
       <th>Transaction: </th>
       <th>Merchant: </th>
@@ -17,11 +17,11 @@
   </table>
 
   <br>
-  <a href="/transactions/new">Add new transaction</a>
+  &nbsp &nbsp<a href="/transactions/new">Add new transaction</a>
   <br>
   <br>
 
-  Total: <%= (sprintf"£%.2f", @cashboard_all.totaller) %>
+  &nbsp &nbsp Total: <%= (sprintf"£%.2f", @cashboard_all.totaller) %>
   <br>
 
   <form method="get">
